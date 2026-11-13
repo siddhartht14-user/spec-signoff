@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {"source": "/_blob/:id", "destination": "/api/blob?id=:id"},
+    {"source": "/r/:t", "destination": "/api/r?t=:t"}
+  ],
+  "crons": [{"path": "/api/escalate", "schedule": "30 3 * * *"}],
+  "functions": {"api/*.js": {"maxDuration": 60}}
+}
